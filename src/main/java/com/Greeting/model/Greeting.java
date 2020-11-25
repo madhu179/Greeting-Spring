@@ -6,7 +6,6 @@ public class Greeting {
 	private String message;
 	
 	public Greeting(long id, String message) {
-		super();
 		this.id = id;
 		this.message = message;
 	}
