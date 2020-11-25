@@ -23,5 +23,12 @@ public class GreetingController {
 		User user = new User(name,"Hamada");
 		return greetingService.addGreeting(user);
 	}
+	
+	@GetMapping("/display")
+	public Greeting greeting(){
+		Long id = (long) 1;
+		return greetingService.getGreetingById(id);
+	}
+	
 
 }
