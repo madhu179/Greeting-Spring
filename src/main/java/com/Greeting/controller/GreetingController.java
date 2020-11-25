@@ -19,9 +19,9 @@ public class GreetingController {
 	private final AtomicLong counter = new AtomicLong();
 	
 	@GetMapping("/get")
-	public String greeting(@RequestParam(value="name",defaultValue="Tadashi") String name){
+	public Greeting greeting(@RequestParam(value="name",defaultValue="Tadashi") String name){
 		User user = new User(name,"Hamada");
-		return greetingService.addGreeting(user).getMessage();
+		return greetingService.addGreeting(user);
 	}
 
 }
